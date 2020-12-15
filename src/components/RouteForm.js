@@ -26,7 +26,7 @@ class RouteForm extends React.Component {
 
     const newRoute = {
       title,
-      route: pathname + route,
+      route: pathname + "/" + this.deleteSlash(route),
       id: Date.now().toString()
     };
 
@@ -36,6 +36,10 @@ class RouteForm extends React.Component {
       title: "",
       route: ""
     });
+  };
+
+  deleteSlash = str => {
+    return str.replace("/", "");
   };
 
   changeInputHandler = event => {

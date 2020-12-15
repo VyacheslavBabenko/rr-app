@@ -17,8 +17,8 @@ const TableRow = ({ route }) => {
 
   return (
     <tr>
-      <td>{route.title}</td>
       <td>{route.route}</td>
+      <td>{route.title}</td>
       <td>
         <button type="button" onClick={toPage} className="btn btn-link">
           Перейти

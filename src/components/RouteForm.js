@@ -15,6 +15,7 @@ class RouteForm extends React.Component {
 
   submitHandler = event => {
     event.preventDefault();
+    const pathname = window.location.pathname;
 
     const { title } = this.state;
     const { route } = this.state;
@@ -25,7 +26,7 @@ class RouteForm extends React.Component {
 
     const newRoute = {
       title,
-      route,
+      route: pathname + route,
       id: Date.now().toString()
     };
 

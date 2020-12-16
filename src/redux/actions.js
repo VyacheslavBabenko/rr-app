@@ -7,10 +7,10 @@ export function createRoute(route) {
   };
 }
 
-export function deleteRoute(id) {
+export function deleteRoute(routeToDelete) {
   return {
     type: DELETE_ROUTE,
-    payload: id
+    payload: routeToDelete
   };
 }
 

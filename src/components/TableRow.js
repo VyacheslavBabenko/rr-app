@@ -11,8 +11,8 @@ const TableRow = ({ route }) => {
     history.push(route.route);
   };
 
-  const deleteUrl = routes => {
-    dispatch(deleteRoute(routes.id));
+  const deleteUrl = routeToDelete => {
+    dispatch(deleteRoute(routeToDelete));
   };
 
   return (

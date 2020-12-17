@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../styles/Header.scss";
 
-export default function Header() {
+export default function Header({ styles }) {
   const routes = useSelector(state => state.routes.routes);
   const history = useHistory();
 
@@ -21,7 +21,7 @@ export default function Header() {
     <header>
       <div className="container">
         <h1> {getTitle()} </h1>
-        <button onClick={goToMain} type="button" className="btn btn-primary">
+        <button onClick={goToMain} type="button" style={styles} className="btn">
           Перейти к родительскому узлу
         </button>
       </div>

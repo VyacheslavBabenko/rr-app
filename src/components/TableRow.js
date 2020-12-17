@@ -19,19 +19,22 @@ const TableRow = ({ route }) => {
     <tr>
       <td>{route.route}</td>
       <td>{route.title}</td>
+      <td>{route.nodes}</td>
       <td>
         <button type="button" onClick={toPage} className="btn btn-link">
           Перейти
         </button>{" "}
       </td>
       <td>
-        <button
-          type="button"
-          onClick={() => deleteUrl(route)}
-          className="btn btn-danger"
-        >
-          Удалить
-        </button>
+        {route.route !== "/main" && (
+          <button
+            type="button"
+            onClick={() => deleteUrl(route)}
+            className="btn btn-danger"
+          >
+            Удалить
+          </button>
+        )}
       </td>
     </tr>
   );

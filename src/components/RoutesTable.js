@@ -2,16 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 import TableRow from "./TableRow";
 
-const RoutesTable = () => {
+const RoutesTable = ({ styles }) => {
   const routes = useSelector(state => state.routes.routes);
 
   return (
     <div className="container mt-5">
       <table className="table">
         <thead>
-          <tr>
+          <tr style={styles}>
             <th scope="col">Route</th>
             <th scope="col">Title</th>
+            <th scope="col">Nodes</th>
             <th scope="col"></th>
             <th scope="col"></th>
           </tr>

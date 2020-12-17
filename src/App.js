@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Page from "./components/Page";
 import { useSelector } from "react-redux";
+import Page from "./components/Page";
 
 function App() {
   const routes = useSelector(state => state.routes.routes);
